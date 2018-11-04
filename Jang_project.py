@@ -159,7 +159,7 @@ DNN = MLPClassifier(hidden_layer_sizes = (layer_1_neurons, layer_2_neurons),
                     activation = 'tanh', 
                     solver = 'adam', 
                     learning_rate_init = 0.01, 
-                    warm_start = True)
+                    warm_start = False)
 
 DNN.fit(train_data, labels)
 DNN_accuracy = accuracy_score(labels, DNN.predict(train_data))

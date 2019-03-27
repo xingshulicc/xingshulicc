@@ -21,3 +21,6 @@ Epoch 299/300
 Epoch 300/300
 650/650 [==============================] - 115s 177ms/step - loss: 0.0400 - acc: 0.9870 - val_loss: 0.4745 - val_acc: 0.8969
 Validation Accuracy = 0.8988
+
+
+Wide_ResNet model size: 54 MB

@@ -1,5 +1,5 @@
 # xingshulicc
-Machine learning, deep learning, evaluation algorithm, the fans of math 
+Machine learning, deep learning, evolution algorithm, the fans of math 
 
 
 trainval.py is used to generate txt file for detection

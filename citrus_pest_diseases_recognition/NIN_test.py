@@ -28,7 +28,7 @@ else:
     input_shape = (img_width, img_height, 3)
 
 batch_size = 16
-epochs = 300
+epochs = 500
 
 train_data_dir = os.path.join(os.getcwd(), 'image_Data/train')
 validation_data_dir = os.path.join(os.getcwd(), 'image_Data/validation')

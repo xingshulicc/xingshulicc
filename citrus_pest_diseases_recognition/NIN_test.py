@@ -15,6 +15,7 @@ from keras import backend as K
 #from model_vgg16 import VGG16
 #from Rnet import New_net
 from wide_Resnet import wide_resnet
+from Bridge_VGG19 import Bridge_VGG
 from learning_rate import choose
 
 #pre-parameters
@@ -39,7 +40,7 @@ nb_validation_samples = 2159
 
 #model = New_net(input_shape = input_shape, classes = num_classes)
 #model = VGG16(input_shape = input_shape, classes = num_classes)
-model = wide_resnet(input_shape = input_shape, classes = num_classes)
+model = Bridge_VGG(input_shape = input_shape, classes = num_classes)
 
 optimizer = SGD(lr = 0.001, momentum = 0.9, nesterov = True) 
 model.compile(loss = 'categorical_crossentropy', optimizer = optimizer, metrics = ['accuracy'])

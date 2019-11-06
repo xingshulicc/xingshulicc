@@ -14,7 +14,6 @@ from keras import backend as K
 #from NIN_16 import NIN16
 #from model_vgg16 import VGG16
 #from Rnet import New_net
-from wide_Resnet import wide_resnet
 from Bridge_VGG19 import Bridge_VGG
 from learning_rate import choose
 

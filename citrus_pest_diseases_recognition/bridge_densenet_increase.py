@@ -153,13 +153,13 @@ def New_net(input_shape, classes):
 #    The shape of x_bridge_5: 14 x 14 x 512
     
     Pool_bridge_2 = MaxPooling2D(pool_size = (2, 2), strides = (2, 2), padding = 'same', 
-                          name = 'MaxPool_bridge_1')(x_bridge_5)
+                          name = 'MaxPool_bridge_2')(x_bridge_5)
 #    The shape of Pool_bridge_2: 7 x 7 x 512
     
     x_bridge_6 = Concatenate(axis = -1)([Pool_bridge_2, Pool_5])
 #    The shape of x_bridge_6: 7 x 7 x 1024
     
-    x_bridge_7 = _bridge_block(inputs = x_bridge_6, filters = 512, block = 3)
+    x_bridge_7 = _bridge_block(inputs = x_bridge_6, filters = 512, block = 4)
 #    The shape of x_bridge_7: 7 x 7 x 512
     
     output = GlobalAveragePooling2D()(x_bridge_7)

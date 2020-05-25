@@ -37,7 +37,7 @@ def lr_scheduler(epoch, mode = 'step_decay'):
     
 def choose(lr_monitorable = True):
     if lr_monitorable:
-        lr_reduce = ReduceLROnPlateau(monitor = 'val_loss', factor = 0.8, patience = 5, 
+        lr_reduce = ReduceLROnPlateau(monitor = 'val_loss', factor = 0.8, patience = 7, 
                                   mode = 'auto', min_lr = lr_base * 1e-7)
     else:
         lr_reduce = LearningRateScheduler(lr_scheduler)

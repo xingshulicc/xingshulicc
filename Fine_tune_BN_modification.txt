@@ -1,3 +1,11 @@
 https://github.com/keras-team/keras/pull/9965
 Change BN layer to use moving mean/var if frozen #9965
 pip install -U --force-reinstall --no-dependencies git+https://github.com/datumbox/keras@bugfix/trainable_bn
+
+
+Thank you @nsmetanin for the suggestion. This worked to freeze batch norm layers.
+
+for layer in model.layers:
+    layer.trainable = False
+    if isinstance(layer, keras.layers.normalization.BatchNormalization):
+        layer._per_input_updates = {}
